@@ -57,14 +57,14 @@ function getRandomQuote(arr) {
 }
 let quoteSelected = getRandomQuote(quotes); 
 
-console.log(quoteSelected);
+
 
 //printQuote function to add the Random quote to the HTML
 
 function printQuote() {
   let messageDisplayed = getRandomQuote(quotes);
-  let quoteDisplay = `<p class='quote'> ${randomQuote.quote} </p>
-  <p class = 'source'>${randomQuote.source}</p>`;
+  let quoteDisplay = `<p class='quote'> ${messageDisplayed.quote} </p>
+  <p class = 'source'>${messageDisplayed.source}</p>`;
   document.getElementById('quote-box').innerHTML = quoteDisplay;
 }
 
