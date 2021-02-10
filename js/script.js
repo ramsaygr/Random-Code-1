@@ -63,8 +63,8 @@ console.log(quoteSelected);
 
 function printQuote() {
   let messageDisplayed = getRandomQuote(quotes);
-  let quoteDisplay = `<p class='quote'> ${quotes.quote} </p>
-  <p class = 'source'>${quotes.source}</p>`;
+  let quoteDisplay = `<p class='quote'> ${randomQuote.quote} </p>
+  <p class = 'source'>${randomQuote.source}</p>`;
   document.getElementById('quote-box').innerHTML = quoteDisplay;
 }
 
