@@ -49,22 +49,25 @@ const quotes =[
 
 function getRandomQuote(arr) { 
   let quoteIndex = Math.floor(Math.random() * quotes.length); 
-  for (var i = 0; i < arr.length; i++) { 
-    let randomQuote = arr[quoteIndex];  
+  for (var i = 0; i < quotes.length; i++) { 
+    let randomQuote = arr[quoteIndex]; 
+    return randomQuote;
   } 
-  return randomQuote;
+  
 }
 let quoteSelected = getRandomQuote(quotes); 
 
 console.log(quoteSelected);
 
-//printQuote function
+//printQuote function to add the Random quote to the HTML
 
-function printQuote(message) {
-  let quoteSelected = getRandomQuote(); 
-  let message = "<p class='quote'>" + quotes.quote + "</p>" +"<p class='source'>" + quotes.source + "</p>";
-  document.getElementById('quote-box').innerHTML = message;
+function printQuote() {
+  let messageDisplayed = getRandomQuote(quotes);
+  let quoteDisplay = `<p class='quote'> ${quotes.quote} </p>
+  <p class = 'source'>${quotes.source}</p>`;
+  document.getElementById('quote-box').innerHTML = quoteDisplay;
 }
+
 
 
 //click event listener for the print quote button
